@@ -1,0 +1,143 @@
+/* Container card for CreatePoll */
+.createpoll-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 35px;
+  border-radius: 12px;
+  background-color: #1e1e1e; /* dark container */
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  color: #e0e0e0;
+}
+
+/* Heading */
+.createpoll-container h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #5393ff;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Form layout */
+.createpoll-form label {
+  display: block;
+  font-weight: 600;
+  color: #a5b4fc;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+.createpoll-form input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #444;
+  background-color: #262626;
+  color: #e0e0e0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.createpoll-form input[type="text"]:focus {
+  border-color: #5393ff;
+  outline: none;
+}
+
+/* Option row container */
+.options-list > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Remove option button */
+.remove-option-btn {
+  background-color: #b00020;
+  color: white;
+  border: none;
+  font-size: 0.95rem;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.remove-option-btn:hover,
+.remove-option-btn:focus {
+  background-color: #d32f2f;
+  outline: none;
+}
+
+/* Add Option button */
+.add-option-btn {
+  display: inline-block;
+  background-color: #2979ff;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.add-option-btn:hover,
+.add-option-btn:focus {
+  background-color: #5393ff;
+  outline: none;
+}
+
+/* Submit button */
+.createpoll-form button[type="submit"] {
+  margin-top: 28px;
+  width: 100%;
+  background-color: #2979ff;
+  color: white;
+  padding: 14px 0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.createpoll-form button[type="submit"]:hover,
+.createpoll-form button[type="submit"]:focus {
+  background-color: #5393ff;
+  outline: none;
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .createpoll-container {
+    padding: 25px 20px;
+    max-width: 100%;
+  }
+
+  .options-list > div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .remove-option-btn {
+    margin-left: 0;
+    margin-top: 6px;
+    align-self: flex-end;
+  }
+
+  .add-option-btn,
+  .createpoll-form button[type="submit"] {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+}

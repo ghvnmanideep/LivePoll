@@ -1,0 +1,100 @@
+/* Container that takes full screen and centers content */
+.home-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background overlay with gradient */
+.home-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #6a0dad 0%, #1e90ff 100%);
+  opacity: 0.87;
+}
+
+/* Main content box */
+.home-content {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 6px 48px rgba(38, 89, 144, 0.09);
+  border-radius: 24px;
+  max-width: 420px;
+  width: 90vw;
+  padding: 3rem 2.2rem 3rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Heading */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #257bff;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle text */
+.home-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2.2rem;
+  line-height: 1.6;
+}
+
+/* Button styles */
+.get-started-btn {
+  background: linear-gradient(90deg, #ff416c 0%, #ff4b2b 100%);
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.75em 2.3em;
+  border-radius: 9px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2.5px 8px rgba(255, 75, 43, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.get-started-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b 0%, #ff416c 100%);
+  transform: scale(1.03);
+  box-shadow: 0 5px 18px rgba(255, 75, 43, 0.45);
+}
+
+/* Button click effect */
+.get-started-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(255, 75, 43, 0.4);
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .home-content {
+    padding: 2rem 1rem;
+    max-width: 95vw;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1rem;
+  }
+
+  .get-started-btn {
+    padding: 0.6em 1.6em;
+    font-size: 1rem;
+  }
+}
